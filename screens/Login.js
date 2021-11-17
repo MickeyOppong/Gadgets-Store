@@ -18,13 +18,15 @@ export default function Login({navigation}) {
           fontSize: 30,
           color: 'white',
           fontWeight: 'bold',
-          paddingBottom: 20
+          paddingBottom: 10
           }}>Welcome to Gadgets Store!
         </Text>
       </View>
 
-    
-          <View style= {{marginTop:50}}>
+          
+      
+           
+          <View style= {{marginTop:80}}>
       <View style= {styles.input}>
         <TextInput 
           style={styles.textstyle}
@@ -32,7 +34,7 @@ export default function Login({navigation}) {
         />
       </View>
 
-      <View style={{paddingTop: 0}}>
+      <View style={{paddingBottom: 0}}>
       </View>
       <View style= {styles.input}>
         <TextInput 
@@ -46,7 +48,7 @@ export default function Login({navigation}) {
          marginTop:80,
          elevation: 5000}}>
       </View>
-         <View style={{padding:0,
+         <View style={{padding:0, marginBottom:0,
                       width:150,}}>
           <Button     
             onPress={() => navigation.navigate('Home')}
