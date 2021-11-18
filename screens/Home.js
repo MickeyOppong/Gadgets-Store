@@ -8,13 +8,15 @@ import{Feather} from '@expo/vector-icons';
 
 export default function Home({navigation}) {
   return (
+    <View style ={{flex:1, justifyContent: "space-evenly", flexWrap: "wrap"}}>
      <ImageBackground
       blurRadius={5}
-      style={{flex: 1,alignItems: 'center', height: "100%"}}
-      justifyContent={'space-evenly'}
+      style={{ alignItems: "center", height: "100%",  width: "100%"}}
+      width= "100%"
+      height="100%"
       source={require('../assets/background.jpg')}>
-       <View style={{paddingBottom: 10}}>
-        <Text style={{fontSize:30, padding:50, color:'violet', marginBottom:30}}>Welcome to Gadgets Store!</Text>
+       <View style={{marginTop: 50, marginHorizontal: 20}}>
+        <Text style={{fontSize:30, color:'violet',}}>Welcome to Gadgets Store!</Text>
       </View>
 
      <View style={styles.container}>
@@ -33,61 +35,151 @@ export default function Home({navigation}) {
       </View>
 
 
-      <View style={{height:"60%",maargin: 10, width: "90%", justifyContent: "center", alignItems: "center"}}>
-      <ScrollView >
+    <View style={{}}>
+      <ScrollView 
+      showsVerticalScrollIndicator={false}
+      decelerationRate="fast"
+      pagingEnabled
+       horizontal ={true}
+      >
         
-    <View style={{flexDirection:'row',marginBottom:20, paddingTop:20,}}>
-        <TouchableOpacity onPress={()=>navigation.navigate("Headsets")}>
-      <View style={{marginEnd:40,}}>
-        <Image style={{height:200,width:200}}source={require('../assets/headset.jpg')}/>
-        <Text style={{fontSize:15, color:'white',fontWeight: 'bold',}}>Headsets</Text>
-      </View>
+    <View style={{flexDirection:'row', margin: 20}}>
+        <TouchableOpacity onPress={()=>navigation.navigate("HeadSetDetails")} style={styles.products} >
+            <View style={{marginEnd:40,}}>
+              <Image style={{height:150,width:150}}source={require('../assets/headset.jpg')}/>
+              <Text style={{fontSize:15, color:'white',fontWeight: 'bold',}}>Headsets</Text>
+            </View>
+            
+              
+            <View style= {styles.productView}>
+                  
+                  <View >
+                  <TouchableOpacity onPress={()=>navigation.navigate("Headsets")} style ={styles.category}>
+                      <Text>More</Text>
+                  </TouchableOpacity>
+                  </View>
+              </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate("LaptopDetails")} style={styles.products} >
+            <View style={{marginEnd:40,}}>
+              <Image style={{height:150,width:150}}source={require('../assets/laptop.jpg')}/>
+              <Text style={{fontSize:15, color:'white',fontWeight: 'bold',}}>Laptops</Text>
+            </View>
+            
+              
+            <View style= {styles.productView}>
+                  
+                  <View >
+                  <TouchableOpacity onPress={()=>navigation.navigate("Laptops")} style ={styles.category}>
+                      <Text>More</Text>
+                  </TouchableOpacity>
+                  </View>
+              </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=>navigation.navigate("Laptops")}>
-      <View style={{alignContent:'space-around'}}>
-        <Image style={{height:200,width:200}} source={require('../assets/laptop.jpg')}/>
-        <Text style={{fontSize:15, color:'white',fontWeight: 'bold',}}>Laptops</Text>
-      </View>
-      </TouchableOpacity>
       </View>
 
-    <View style={{flexDirection:'row'}}>
-
-    <TouchableOpacity onPress={()=>navigation.navigate("Speakers")}>
-      <View style={{marginEnd:40,}}>
-        <Image style={{height:200,width:200}}source={require('../assets/speakers.jpg')}/>
-        <Text style={{fontSize:15, color:'white',fontWeight: 'bold',}}>Speakers</Text>
-      </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={()=>navigation.navigate("Phones")}>
-      <View style={{alignContent:'space-around'}}>
-        <Image style={{height:200,width:200}} source={require('../assets/phones.jpg')}/>
-        <Text style={{fontSize:15, color:'white',fontWeight: 'bold',}}>Phones</Text>
-      </View>
-      </TouchableOpacity>
-      </View>
     </ScrollView>
+
     </View>
     
+
+    <View style={{}}>
+      <ScrollView 
+      showsVerticalScrollIndicator={false}
+      decelerationRate="fast"
+      pagingEnabled
+       horizontal ={true}
+      >
+        
+    <View style={{flexDirection:'row', margin: 20}}>
+        <TouchableOpacity onPress={()=>navigation.navigate("SpeakerDetails")} style={styles.products} >
+            <View style={{marginEnd:40,}}>
+              <Image style={{height:150,width:150}}source={require('../assets/speakers.jpg')}/>
+              <Text style={{fontSize:15, color:'white',fontWeight: 'bold',}}>Speakers</Text>
+            </View>
+            
+              
+            <View style= {styles.productView}>
+                  
+                  <View >
+                  <TouchableOpacity onPress={()=>navigation.navigate("Speakers")} style ={styles.category}>
+                      <Text>More</Text>
+                  </TouchableOpacity>
+                  </View>
+              </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate("PhoneDetails")} style={styles.products} >
+            <View style={{marginEnd:40,}}>
+              <Image style={{height:150,width:150}}source={require('../assets/phones.jpg')}/>
+              <Text style={{fontSize:15, color:'white',fontWeight: 'bold',}}>Phones</Text>
+            </View>
+            
+              
+            <View style= {styles.productView}>
+                  
+                  <View >
+                  <TouchableOpacity onPress={()=>navigation.navigate("Phones")} style ={styles.category}>
+                      <Text>More</Text>
+                  </TouchableOpacity>
+                  </View>
+              </View>
+        </TouchableOpacity>
+
+      </View>
+
+    </ScrollView>
+
+    
+
+    </View>
+
+    
     </ImageBackground>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection:'row',
     backgroundColor:'#e8e9eb',
-    marginTop:0,
-    marginBottom:60,
-    padding:30,
     borderRadius:30,
-    width:350,
+    padding: 10,
+    justifyContent: "flex-start",
+    width:"80%",
     alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom:60,
-    height:"20%"
+    marginBottom:30,
+    marginTop: 30,
+    height:50,
   },
+  productView: {
+    margin: 5,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    flexWrap: "wrap",
+    
+  },
+  category:{
+    width: 90,
+    height: 30,
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 5,
+    marginRight: 5,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#fff",
+    borderColor: "#FF6500",
+
+},
+products:{
+  borderWidth: 1,
+    borderColor: "#fff",
+    borderRadius: 10,
+    marginHorizontal: 10,
+    alignItems: "center",
+    padding: 10
+    
+}
 });

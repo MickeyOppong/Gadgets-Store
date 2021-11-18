@@ -6,38 +6,28 @@ const Headsets =  [{
   
   title: "Gaming Headset",
   price: "$110",
+  color: "Blue and balck",
   picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS5-dSBLA3oUfbu2AUxOXsj2K6ziZKIpUWzQXHHFBVtky-2CItjz0bN8-JD_NNX-cTAtw&usqp=CAU"
 },
 {
   id: "M7652_D_08X1",
-  title: "CHUCH TAYLOR ALL STAR",
+  title: "Pro wireless headset high voice",
   price: "$55",
-  picture:'https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dwf1702069/images/d_08/M7652_D_08X1.jpg?sw=406'
+  picture:'https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/proflight_hdst_2/product-silo-images/48593_ProFlight_Series2_1200x1022_02.psd/jcr:content/renditions/cq5dam.web.600.600.png'
 },
 {
   id: "171546C_A_107X1",
-  title: "RUN STAR MOTION",
+  title: "Wireless USB Computer and office headset",
   price: "$120",
-  picture:'https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw977de2d6/images/a_107/171546C_A_107X1.jpg?sw=964'
+  picture:'https://cdn.shopify.com/s/files/1/0553/3171/7282/products/leitner-wireless-over-the-head-headset_472x.jpg?v=1630343597'
 },
 {
   id: "162054C_A_107X1",
   title: "CHUCK 70",
   price: "$85",
-  picture:'https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw375292d6/images/a_107/162054C_A_107X1.jpg?sw=964'
+  picture:'https://www.ceekvr.com/api/image/5e7a9950bf9f4_GUxVM7Cg.jpeg'
 },
-{
-  id: "168817C_A_107X1",
-  title: "RUN STAR HIKE",
-  price: "$100",
-  picture:'https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw894ace3e/images/a_107/168817C_A_107X1.jpg?sw=964'
-},
-{
-  id: "159573C_A_107X1",
-  title: "CONS CTAS PRO",
-  price: "$75",
-  picture:'https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw60afe6ee/images/a_107/159573C_A_107X1.jpg?sw=964'
-},
+
 ];
 
 const renderItem = ({ item }) => (
@@ -72,7 +62,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  converseshoes: {
+  Headsets: {
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
